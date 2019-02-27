@@ -34,7 +34,11 @@ document.getElementById('submit').addEventListener(
 );
 
 // Update - Add a class of checked when an item is clicked
-
+var list = document.querySelector('UL');
+list.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI')
+    e.target.classList.toggle('checked');
+}, false);
 
 // Read - Simply display the item
 /* Already in place when creating an item */
